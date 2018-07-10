@@ -4,44 +4,92 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Мои SVG</title>
 <style>
-div.gallery {
-    margin: 5px;
-    border: 1px solid #ccc;
-    float: left;
-    width: 200px;
+
+
+@media (min-width: 1px) and (max-width: 375px){
+  div.gallery {
+    margin:15%;
+
+    float: center;
+    width: 70%;
+    height: 35%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13;
+    background:#f6f6f6;
+    border-radius: 5px;
+  }
 }
 
-div.gallery:hover {
-    border: 1px solid #777;
+@media (min-width: 375px) and (max-width: 375px){
+  div.gallery {
+    margin:3.5%;
+    box-shadow:0px 0px 0px 1px #ccc inset;
+    border-radius: 5px;
+    float: left;
+    width: 150px;
+    height: 200px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13;
+  }
 }
+
+@media (min-width: 376px) and (max-width: 470px){
+  div.gallery {
+    margin:5%;
+    margin-bottom: 40px;
+    float: left;
+    width: 40%;
+    height: 150px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13;
+    background:#f6f6f6;
+    border-radius: 5px;
+  }
+}
+@media (min-width: 470px){
+  div.gallery {
+    margin:10px;
+    margin-bottom: 40px;
+    float: left;
+    width: 150px;
+    height: 200px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13;
+    background:#f6f6f6;
+    border-radius: 5px;
+  }
+}
+
 
 div.gallery img {
     width: 100%;
-    height: auto;
+    height: 100%;
 }
 
 div.desc {
-    padding: 15px;
+    padding: 5px;
     text-align: center;
 }
 </style>
 </head>
 <body>
 
-<div class="gallery">
-  <a target="_blank" href="compass.svg">
-    <img src="compass.svg" width="200" height="200">
-  </a>
-  <div class="desc">Add a description of the image here</div>
-</div>
-<div class="gallery">
-  <a target="_blank" href="lucifer.svg">
+  <div class="gallery">
+    <img src="compass.svg" width="200" height="150">
+    <div class="desc">Пробная анимация иконки</div>
+  </div>
+  <div class="gallery">
     <img src="lucifer.svg" width="200" height="200">
-  </a>
-  <div class="desc">Add a description of the image here</div>
-</div>
-
-
+    <div class="desc">Прелоудер для костра</div>
+  </div>
+  <div class="gallery">
+    <img src="lucifer.svg" width="200" height="200">
+    <div class="desc">Прелоудер</div>
+  </div>
+  <div class="gallery">
+    <img src="lucifer.svg" width="200" height="200">
+    <div class="desc">Прелоудер для костра</div>
+  </div>
 
 </body>
 </html>
