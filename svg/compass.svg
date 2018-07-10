@@ -1,0 +1,42 @@
+<svg width="300" height="300" x="0" y="0" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 50 50" >
+
+	<defs>
+		<circle id="body" cx="0" cy="0" r="10"/>
+		<path id="arrow" d="M15,12s-2-5.2-2.7-7.2L12,4.6l-.3.2C10.9,6.8,9,12,9,12s2,5.2,2.7,7.2c.1.2.2.2.3.2s.3,0,.3-.2C13.1,17.2,15,12,15,12Z" transform="translate(-12 -12) rotate(0)" />
+		<circle id="pin" cx="0" cy="0" r="1.5"/>
+		<mask id="m_arrow">
+			<use xlink:href="#body" fill="white"/>
+			<use id="ar_ani" xlink:href="#arrow" fill="black" transform="rotate(45)"/>
+			<use xlink:href="#pin" fill="white"/> 
+		</mask>
+			<animateTransform
+				xlink:href="#ar_ani"
+				attributeName="transform"
+				type="rotate"
+				values="45 0 0;
+				90 0 0;
+				35 0 0;
+				70 0 0;
+				40 0 0;
+				50 0 0;
+				43 0 0;
+				47 0 0;
+				45 0 0"
+				dur="3"
+				begin="0s"
+				repeatCount="indefinite"
+				calcMode="spline"
+				keySplines="0.5 0 0.5 1;
+				0.5 0 0.5 1;
+				0.5 0 0.5 1;
+				0.5 0 0.5 1;
+				0.5 0 0.5 1;
+				0.5 0 0.5 1;
+				0.5 0 0.5 1;
+				0.5 0 0.5 1">
+			</animateTransform>
+	</defs>
+	<g transform="translate(12 12)">
+		<use xlink:href="#body" x="0" y="0" mask="url(#m_arrow)" fill="#989898" fill-opacity="1"/>
+	</g>
+</svg>
