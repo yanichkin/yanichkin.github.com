@@ -1,108 +1,62 @@
 <html>
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Animation SVG</title>
-<style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Animation preview</title>
+  
 
-
-@media (min-width: 1px) and (max-width: 375px){
-  div.gallery {
-    margin:15%;
-    margin-bottom: 25%;
-    float: center;
-    width: 70%;
-    height: 40%;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 13;
-    background:#f6f6f6;
-    border-radius: 5px;
+  <style>
+   * {
+    margin: 0;
+    padding: 0;
+   }
+  :root{
+    --c_div: #f6f6f6;
+    --b_r_div: 5px;
   }
-}
 
+  @media (min-width: 0px) and (max-width: 600px){
+    .preview {
+      margin:0;
+      width: 70vmin;
+      height: 70vmin;
+    }
+  }
 
-@media (min-width: 375px) and (max-width: 470px){
-  div.gallery {
-    margin:5%;
-    margin-bottom: 10%;
-    float: left;
-    width: 40%;
-    height: 150px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 13;
-    background:#f6f6f6;
-    border-radius: 5px;
+  @media (min-width: 600px) {
+    .preview {
+      margin:0;
+      width: 200px;
+      height: 200px;
+      
+    }
   }
-}
-@media (min-width: 470px) and (max-width: 700px){
-  div.gallery {
-    margin:3.6666666667%;
-    margin-bottom: 40px;
-    float: left;
-    width: 26%;
-    height: 200px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 13;
-    background:#f6f6f6;
-    border-radius: 5px;
+  .preview {
+    background: var(--c_div);
+    border-radius: var(--b_r_div);
   }
-}
-@media (min-width: 700px) and (max-width: 1000px){
-  div.gallery {
-    margin:2.5%;
-    margin-bottom: 40px;
-    float: left;
-    width: 20%;
-    height: 200px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 13;
-    background:#f6f6f6;
-    border-radius: 5px;
-  }
-}
-@media (min-width: 1000px){
-  div.gallery {
-    margin:10px;
-    margin-bottom: 40px;
-    float: left;
-    width: 180px;
-    height: 200px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 13;
-    background:#f6f6f6;
-    border-radius: 5px;
-  }
-}
 
-div.gallery img {
-    width: 100%;
-    height: 100%;
-}
+    .align_div{
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
 
-div.desc {
-    padding: 8%;
-    text-align: center;
-}
-</style>
+  </style>
 </head>
 <body>
 
-  <div class="gallery">
-    <img src="compass.svg" width="200" height="150">
-    <div class="desc">Пробная анимация иконки</div>
+
+
+  <div class="align_div">
+   <div class="preview">
+    <object type="image/svg+xml" data="compass.svg" width="100%" height="100%"></object>
   </div>
-  <div class="gallery">
-    <img src="lucifer.svg" width="200" height="200">
-    <div class="desc">Прелоудер для костра</div>
-  </div>
-  <div class="gallery">
-    <img src="lucifer.svg" width="200" height="200">
-    <div class="desc">Прелоудер</div>
-  </div>
-  <div class="gallery">
-    <img src="lucifer.svg" width="200" height="200">
-    <div class="desc">Прелоудер для костра</div>
-  </div>
+</div>
+
+
 
 </body>
 </html>
