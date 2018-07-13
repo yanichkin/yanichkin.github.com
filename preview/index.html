@@ -6,10 +6,10 @@
   
 
   <style>
-   * {
+  * {
     margin: 0;
     padding: 0;
-   }
+  }
   :root{
     --c_div: #f6f6f6;
     --b_r_div: 5px;
@@ -17,18 +17,24 @@
 
   @media (min-width: 0px) and (max-width: 600px){
     .preview {
-      margin:0;
       width: 70vmin;
       height: 70vmin;
+    }
+    .align_div{
+         margin: 10%;
+             align-items: top;
     }
   }
 
   @media (min-width: 600px) {
     .preview {
-      margin:0;
       width: 200px;
       height: 200px;
-      
+
+    }
+        .align_div{
+         margin: 0%;
+             align-items: center;
     }
   }
   .preview {
@@ -36,15 +42,15 @@
     border-radius: var(--b_r_div);
   }
 
-    .align_div{
-      margin: 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-    }
+  .align_div{
+ 
+    display: flex;
+    justify-content: center;
 
-  </style>
+    height: 100vh;
+  }
+
+</style>
 </head>
 <body>
 
