@@ -1,103 +1,24 @@
+<!DOCTYPE html>
 <html>
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Animation SVG</title>
   <style>
-  /*1*/
-
-  @media (min-width: 1px) and (max-width: 375px){
-    div.gallery {
-      margin:15%;
-      margin-bottom: 25%;
-      float: center;
-      width: 70%;
-      height: 40%;
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: 13;
-      background:#f6f6f6;
-      border-radius: 5px;
-    }
+  *{
+    margin: 0;
+    padding: 0;
   }
-
-  /*2*/
-  @media (min-width: 375px) and (max-width: 470px){
-    div.gallery {
-      margin:5%;
-      margin-bottom: 10%;
-      float: left;
-      width: 40%;
-      height: 150px;
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: 13;
-      background:#f6f6f6;
-      border-radius: 5px;
-    }
-  }
-  /*3*/
-  @media (min-width: 470px) and (max-width: 700px){
-    div.gallery {
-      margin:3.6666666667%;
-      margin-bottom: 40px;
-      float: left;
-      width: 26%;
-      height: 200px;
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: 13;
-      background:#f6f6f6;
-      border-radius: 5px;
-    }
-  }
-  /*4*/
-  @media (min-width: 700px) and (max-width: 1000px){
-    div.gallery {
-
-      margin:2.5%;
-      margin-bottom: 40px;
-      float: left;
-      width: 20%;
-      height: 200px;
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: 13;
-      background:#f6f6f6;
-      border-radius: 5px;
-    }
-
-  }
-  /*inline*/
-  @media (min-width: 1000px) and (max-width: 1500px){
-    div.gallery {
-
-      margin:0.5%;
-      margin-bottom: 7%;
-      float: left;
-      width: 19%;
-      height: 200px;
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: 13;
-      background:#f6f6f6;
-      border-radius: 5px;
-    }
-    div.fullsize{
-      margin-left: 15%;
+  @media (min-width: 1000px) {
+    .main-container{
+      margin-left: 15vw;
       margin-top: 70px;
-      width: 70%;
-      height: 200px;
+      width: 70vw;
+      height: 100vh;
     }
   }
   @media (min-width: 1500px){
-    div.gallery {
-      margin:0.3333333334%;
-      margin-bottom: 7%;
-      float: left;
-      width: 16%;
-      height: 200px;
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: 13;
-      background:#f6f6f6;
-      border-radius: 5px;
-    }
-    div.fullsize{
+    .main-container{
       margin-left: 20%;
       margin-top: 70px;
       width: 60%;
@@ -105,90 +26,159 @@
     }
   }
 
-  /*retina*/
+  .galleryText {
+    margin:15%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+  }
+  @media (min-width: 375px) {
+    .galleryText {
+      margin:5%;
+    }
+  }
+  @media (min-width: 470px) {
+    .galleryText {
+      margin:1.6666666667vw;
+    }
+  }
+  @media (min-width: 700px) {
+    .galleryText {
+      margin:2.5%;
+    }
+  }
+  @media (min-width: 1000px){
+    .galleryText {
+       margin: 0.5vw 1vw 2vw;
+    }
+  }
 
-  div.gallery img {
+
+  .gallery {
+    margin: 25% 15% 15%;
+    width: 70%;
+    height: 40%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    background:#f6f6f6;
+    border-radius: 5px;
+    position: relative;
+  }
+  @media (min-width: 0px) {
+    .gallery {
+      margin: 5vw 15vw 18vw;
+      float: left;
+      width: 70vw;
+      height: 70vw;
+    }
+  }
+  @media (min-width: 375px) {
+    .gallery {
+      margin: 5vw 5vw 10vw;
+      float: left;
+      width: 40vw;
+      height: 40vw;
+    }
+  }
+  @media (min-width: 470px) {
+    .gallery {
+      margin: 3% 1.6666666667vw 7vw;
+      float: left;
+      width: 30vw;
+      height: 30vw;
+    }
+  }
+  @media (min-width: 700px) {
+    .gallery {
+      margin: 2.5vw 2.5vw 5vw;
+      float: left;
+      width: 20vw;
+      height: 20vw;
+    }
+
+  }
+  @media (min-width: 1000px) {
+    .gallery {
+      margin: 0.5vw 1vw 7vw;
+      float: left;
+      width: 15vw;
+      height: 15vw;
+    }
+
+  }
+  @media (min-width: 1500px){
+    .gallery {
+      margin: 0.3333333334% 0.5vw 7%;
+      float: left;
+      width: 11vw;
+      height: 11vw;
+    }
+
+  }
+  
+  .gallery_img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translatey(-50%);
+  }
+
+  .gallery_desc {
+    padding: 8%;
+    text-align: center;
+  }
+
+  .mask {
+
+    width: 77px;
+    height: 34px;
+    overflow: hidden;
+
+    
+  }
+  .alignInDiv{
     width: 100%;
     height: 100%;
   }
-  
-/*  @media (-webkit-min-device-pixel-ratio: 2) { 
-    div.gallery img {
-      width: 200px;
-      height: 200px;
-    }
-    }*/
-    /*---*/
-    div.desc {
-      padding: 8%;
-      text-align: center;
-    }
-    /*text*/
-    @media (min-width: 1px) and (max-width: 375px){
-      div.galleryText {
-        margin:15%;
-        font-family: Arial, Helvetica, sans-serif;
-        font-size: 13;
-      }
-    }
-    @media (min-width: 375px) and (max-width: 470px){
-      div.galleryText {
-        margin:5%;
-        font-family: Arial, Helvetica, sans-serif;
-        font-size: 13;
-      }
-    }
-    @media (min-width: 470px) and (max-width: 700px){
-      div.galleryText {
-        margin:3.6666666667%;
-        font-family: Arial, Helvetica, sans-serif;
-        font-size: 13;
-      }
-    }
-    @media (min-width: 700px) and (max-width: 1000px){
-      div.galleryText {
-        margin:2.5%;
-        font-family: Arial, Helvetica, sans-serif;
-        font-size: 13;
-      }
-    }
-    @media (min-width: 1000px){
-      div.galleryText {
-        margin:0.5%;
-        font-family: Arial, Helvetica, sans-serif;
-        font-size: 13;
-      }
-    }
-    @media (min-width: 1500px){
-      div.galleryText {
-       margin:0.5%;
-       font-family: Arial, Helvetica, sans-serif;
-       font-size: 13;
-     }
-   }
 
- </style>
+</style>
 </head>
 <body>
-  <div class="fullsize">
-    <div class="galleryText">
+  <div class="main-container">
+
+    <div class="galleryText ">
       <h1>Приют аниматора</h1>
       <p>Собрание всех созданных анимаций svg</p>
     </div>
 
     <div class="gallery">
-      <object type="image/svg+xml" data="compass.svg" width="100%" height="100%"></object>
-      <div class="desc">Пробная анимация иконки</div>
+      <div class="alignInDiv">
+        <div>
+          <object class="gallery_img" type="image/svg+xml" data="compass.svg"></object>
+        </div>
+      </div>
+      <div class="gallery_desc">Пробная анимация иконки</div>
     </div>
 
     <div class="gallery">
-      <object type="image/svg+xml" data="lucifer.svg" width="100%" height="100%"></object>
-      <div class="desc">Лоудер для игры</div>
-    </div>
-    <div class="gallery">
-      <object type="image/svg+xml" data="timer.svg" width="100%" height="100%"></object>
-      <div class="desc">Таймер для костра</div>
+      <div class="alignInDiv">
+        <object class="gallery_img" type="image/svg+xml" data="lucifer.svg"></object>
+      </div>
+      <div class="gallery_desc">Прелоудер для костра</div>
     </div>
 
-  </body>
-  </html>
+
+    <div class="gallery">
+      <div class="alignInDiv">
+        <div class="mask gallery_img">
+          <object type="image/svg+xml" data="timer.svg"></object>
+        </div>
+      </div>
+      <div class="gallery_desc">Таймер костра</div>
+    </div>
+
+
+  </div>
+</body>
+</html>
